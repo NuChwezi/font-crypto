@@ -1,11 +1,41 @@
 @font-face {
     font-family:"GreekMath";
-    src: url("fonts/greek_math.ttf") /* TTF file for CSS3 browsers */
+    src: url("fonts/greek_math.ttf") 
+}
+
+
+@font-face {
+    font-family:"OldEgypt";
+    src: url("fonts/old_egypt_glyphs.ttf") 
+}
+
+
+@font-face {
+    font-family:"EasyCuneiform";
+    src: url("fonts/easy_cuneiform.ttf") 
+}
+
+
+@font-face {
+    font-family:"Unitology";
+    src: url("fonts/unitology.ttf") 
+}
+
+
+@font-face {
+    font-family:"Forerunner";
+    src: url("fonts/forerunner.ttf") 
+}
+
+
+@font-face {
+    font-family:"Masonic";
+    src: url("fonts/masonic.ttf") 
 }
 
 @font-face {
     font-family:"Modern";
-    src: url("fonts/modern.ttf") /* TTF file for CSS3 browsers */
+    src: url("fonts/modern.ttf") 
 }
 
 .out {

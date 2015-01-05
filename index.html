@@ -63,16 +63,29 @@ body {
                 <textarea id="in" class="form-control in" ></textarea>
             </div>
             <div class="col-md-2">
-                <div class="btn-group">
-                    <button title="Encrypt" type="button" class="btn btn-default" id="encode">EN</button>
-
-                    <!-- button type="button" class="btn btn-default" id="toggle-encode">~</button -->
+                <div class="row">
+                    <select id="toggle-font" class="form-control">
+                        <option value="GreekMath">Greek</option>
+                        <option value="OldEgypt">Egyptian</option>
+                        <option value="EasyCuneiform">Cuneiform</option>
+                        <option value="Unitology">Unitology</option>
+                        <option value="Forerunner">Halo</option>
+                        <option value="Masonic">Masonic</option>
+                    </select>
                 </div>
-                <div class="btn-group">
-                    <button title="Decrypt" type="button" class="btn btn-warning" id="decode">DE</button>
+                <br/>
+                <div class="row">
+                    <div class="btn-group">
+                        <button title="Encrypt" type="button" class="btn btn-default" id="encode">EN</button>
 
-                    <!-- button type="button" class="btn btn-warning" id="toggle-decode">~</button -->
-                    <button title="Render to Image" type="button" class="btn btn-warning" id="toggle-out-image">~</button>
+                        <!-- button type="button" class="btn btn-default" id="toggle-encode">~</button -->
+                    </div>
+                    <div class="btn-group">
+                        <button title="Decrypt" type="button" class="btn btn-warning" id="decode">DE</button>
+
+                        <!-- button type="button" class="btn btn-warning" id="toggle-decode">~</button -->
+                        <button title="Render to Image" type="button" class="btn btn-warning" id="toggle-out-image">~</button>
+                    </div>
                 </div>
             </div>
             <div class="col-md-5">

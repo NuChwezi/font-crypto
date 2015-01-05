@@ -1,5 +1,10 @@
 (function($) {
 $(document).ready(function() {
+
+	$('#toggle-font').change(function(){
+		$('#out').css({ 'font-family': $(this).val() });
+	});
+
 	$('#encode').click(function(){
 		$('#out').val($('#in').val()).trigger('autosize.resize');
 		$('#in').focus();
@@ -9,7 +14,6 @@ $(document).ready(function() {
 		$('#in').val($('#out').val()).trigger('autosize.resize');
 		$('#out').focus();
 	});
-
 
 	$('#toggle-encode').click(function(){
 		$('#in').toggle();
