@@ -1,0 +1,31 @@
+@font-face {
+    font-family:"GreekMath";
+    src: url("fonts/greek_math.ttf") /* TTF file for CSS3 browsers */
+}
+
+@font-face {
+    font-family:"Modern";
+    src: url("fonts/modern.ttf") /* TTF file for CSS3 browsers */
+}
+
+.out {
+    font-family:'GreekMath';
+    font-size: 26px;
+    font-weight:normal;
+    text-align: left;
+    line-height: 100%;
+    border-bottom: 1px solid #484848;
+    padding-bottom: 5px;
+    margin-bottom:7px;
+}
+
+.in {
+    font-family:'Modern';
+    font-size: 26px;
+    font-weight:normal;
+    text-align: left;
+    line-height: 100%;
+    border-bottom: 1px solid #484848;
+    padding-bottom: 5px;
+    margin-bottom:7px;
+}
