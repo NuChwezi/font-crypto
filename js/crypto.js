@@ -19,6 +19,22 @@ $(document).ready(function() {
 		$('#out').toggle();
 	});
 
+	$('#toggle-out-image').click(function(){
+		// $('#out').toggle();
+
+        html2canvas($("#out"), {
+            onrendered: function(canvas) {
+                $('#snapshots').empty();
+                $('#snapshots').append($('<div>', { 'class': 'col-md-5' }).append( canvas )); 
+
+                canvas.toBlob(function(blob) {
+                    saveAs(blob, "Encoded.png"); 
+                });
+            }
+        });
+
+	});
+
 	$('textarea').autosize();  
 });
 }(jQuery));
