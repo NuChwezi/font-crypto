@@ -8,11 +8,13 @@ $(document).ready(function() {
 	$('#encode').click(function(){
 		$('#out').val($('#in').val()).trigger('autosize.resize');
 		$('#in').focus();
+        ga('send', 'event', 'button', 'click', 'encode');
 	});
 
 	$('#decode').click(function(){
 		$('#in').val($('#out').val()).trigger('autosize.resize');
 		$('#out').focus();
+        ga('send', 'event', 'button', 'click', 'decode');
 	});
 
 	$('#toggle-encode').click(function(){
@@ -36,6 +38,8 @@ $(document).ready(function() {
                 });
             }
         });
+
+        ga('send', 'event', 'button', 'click', 'export-image');
 
 	});
 
