@@ -1,6 +1,6 @@
 # CRYPTO #
 
-Crypto is just more or less what its name says - it's a tool for doing stuff concerning communicating ot storing info in "occult" ways, as a means to impress or add some security to otherwise mundane or arcane messages (it all depends).
+Crypto is more or less what its name says - a tool for doing stuff concerning communicating or storing info in "occult" ways, as a means to impress or add some security to otherwise mundane or arcane messages (it all depends).
 
 How does it work?
 ----------------------
