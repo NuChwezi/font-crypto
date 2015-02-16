@@ -5,6 +5,8 @@ Crypto is more or less what its name says - a tool for doing stuff concerning co
 How does it work?
 ----------------------
 
+![crypto-long.png](https://bitbucket.org/repo/qXG6X6/images/3697993275-crypto-long.png)
+
 Copy-Paste your text message into the input section (or you can go old school like me and just write it down), and then encode it into one of target "crypto" or "occult" alphabets for added secrecy, after which you can continue working on the message or just click the "~" export button, to export encoded message to an image for use in email, print or on the web.
 
 Who's this tool meant for?
