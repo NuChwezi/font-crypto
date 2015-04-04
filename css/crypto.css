@@ -38,9 +38,20 @@
     src: url("fonts/modern.ttf") 
 }
 
+
+@font-face {
+    font-family:"Samarn";
+    src: url("fonts/samarn.ttf") 
+}
+
+@font-face {
+    font-family:"Olde";
+    src: url("fonts/olde_english.ttf") 
+}
+
 .out {
     font-family:'GreekMath';
-    font-size: 26px;
+    font-size: 36px;
     font-weight:normal;
     text-align: left;
     line-height: 100%;
