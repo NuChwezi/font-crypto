@@ -1,9 +1,11 @@
 # CRYPTO #
 
-Crypto is just more or less what its name says - it's a tool for doing stuff concerning communicating ot storing info in "occult" ways, as a means to impress or add some security to otherwise mundane or arcane messages (it all depends).
+Crypto is more or less what its name says - a tool for doing stuff concerning communicating or storing info in "occult" ways, as a means to impress or add some security to otherwise mundane or arcane messages (it all depends).
 
 How does it work?
 ----------------------
+
+![crypto-long.png](https://bitbucket.org/repo/qXG6X6/images/3697993275-crypto-long.png)
 
 Copy-Paste your text message into the input section (or you can go old school like me and just write it down), and then encode it into one of target "crypto" or "occult" alphabets for added secrecy, after which you can continue working on the message or just click the "~" export button, to export encoded message to an image for use in email, print or on the web.
 
