@@ -171,16 +171,33 @@ $(document).ready(function() {
 		$('#out').toggle();
 	});
 
-	$('#toggle-out-image').click(function(){
-		// $('#out').toggle();
 
+	$('#toggle-out-pop').click(function(){
+        var src = $('#out');
+        var val = $(src).val();
+        var i = val.indexOf('\n');
+        var title = val.substring(0, i >= 0 ? i : 9);
+        var w = window.open('', title, 'width=400,height=400,resizeable,scrollbars');
+        var out = '<html><head><title>'+ title +'</title><link rel="stylesheet" href="css/crypto.css"></head><body>';
+        out += '<div id="out" style="width:100%;height:100%;font-family:'+ $(src).css('font-family') +'; font-size:'+ $(src).css('font-size') +'" >' + val.replace(/\n/g,"<br/>") + '</div>';
+        out += '</body></html>';
+        w.document.write(out);
+        w.document.close();
+
+        ga('send', 'event', 'button', 'click', 'export-popup');
+    });
+
+	$('#toggle-out-image').click(function(){
         html2canvas($("#out"), {
             onrendered: function(canvas) {
                 $('#snapshots').empty();
                 $('#snapshots').append($('<div>', { 'class': 'col-md-5' }).append( canvas )); 
 
                 canvas.toBlob(function(blob) {
-                    saveAs(blob, "Encoded.png"); 
+                    var val = $('#out').val();
+                    var i = val.indexOf('\n');
+                    var title = val.substring(0, i >= 0 ? i : 9);
+                    saveAs(blob, title +".png"); 
                 });
             }
         });

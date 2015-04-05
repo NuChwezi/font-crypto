@@ -62,6 +62,7 @@ body {
                     <ul>
                         <li>"+" increases size of encoded message, "-" reverses this</li>
                         <li>Click "~" to export the encoded message to an image you can share via email, print, etc.</li>
+                        <li>Click "*" to export the encoded message to a new window, from which you can reliably print to PDF, etc.</li>
                     </ul>
                 </small>
             </div>
@@ -83,7 +84,7 @@ body {
                         <option disabled>~ * ~</option>
                         <option data-f="Samarn" value="mirrors">Mirrors~Orient</option>
                         <option data-f="Olde" value="mirrors">Mirrors~Olde</option>
-                        <option data-f="Olde" value="chaos">Chaos~Olde</option>
+                        <option data-f="kelmscot" value="chaos">~ Lumtauto ~</option>
                     </select>
                 </div>
                 <br/>
@@ -95,11 +96,11 @@ body {
                     </div>
                     <div class="btn-group">
                         <button title="Decrypt" type="button" class="btn btn-warning" id="decode">DE</button>
-
                         <!-- button type="button" class="btn btn-warning" id="toggle-decode">~</button -->
                         <button title="Increase Font Size" type="button" class="btn btn-warning" id="font-increase">+</button>
                         <button title="Decrease Font Size" type="button" class="btn btn-warning" id="font-decrease">-</button>
                         <button title="Render to Image" type="button" class="btn btn-warning" id="toggle-out-image">~</button>
+                        <button title="Export to Window" type="button" class="btn btn-warning" id="toggle-out-pop">*</button>
                     </div>
                 </div>
             </div>

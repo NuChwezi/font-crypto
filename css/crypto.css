@@ -49,6 +49,11 @@
     src: url("fonts/olde_english.ttf") 
 }
 
+@font-face {
+    font-family:"kelmscot";
+    src: url("fonts/kelmscot.ttf") 
+}
+
 .out {
     font-family:'GreekMath';
     font-size: 36px;
