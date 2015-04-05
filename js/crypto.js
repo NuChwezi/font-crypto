@@ -1,3 +1,59 @@
+
+function transform_chaos(src,target,reverse){
+    var v_alphabet = 'aeiou'.split('');
+    var v_al_mirror = 'uoiea'.split('');
+    var vu_alphabet = 'AEIOU'.split('');
+    var vu_al_mirror = 'UOIEA'.split('');
+    var l_alphabet = [];
+    var l_al_mirror = [];
+    var u_alphabet = [];
+    var u_al_mirror = [];
+
+    for(var l='a'.charCodeAt(0); l <= 'z'.charCodeAt(0); l++){
+        var s = String.fromCharCode(l);
+        var S = s.toUpperCase();
+        if(v_alphabet.indexOf(s) >= 0) {// a vowel
+            l_alphabet.push(s);
+            u_alphabet.push(S);
+            var _s = v_al_mirror[v_alphabet.indexOf(s)];
+            var _S = _s.toUpperCase();
+            l_al_mirror.push(_s);
+            u_al_mirror.push(_S);
+        }else {
+            l_alphabet.push(s);
+            l_al_mirror.push(s);
+            u_alphabet.push(S);
+            u_al_mirror.push(S);
+        }
+    }
+
+    for(var i=0; i < l_al_mirror.length * 0.5; i++){
+        var t = l_al_mirror[i];
+        var _t = l_al_mirror[l_al_mirror.length-1-i];
+        if((v_alphabet.indexOf(t) < 0 ) && (v_alphabet.indexOf(_t) < 0 )) {// skip vowel
+            l_al_mirror[i] = _t;
+            l_al_mirror[l_al_mirror.length-1-i] = t;
+
+            var T = u_al_mirror[i];
+            u_al_mirror[i] = u_al_mirror[u_al_mirror.length-1-i];
+            u_al_mirror[u_al_mirror.length-1-i] = T;
+        }
+    }
+
+    var _in = $(src).val();
+    var _out = _in.split("").map(function(c){ 
+        if(reverse){
+            var _c = u_al_mirror.indexOf(c) >= 0 ? u_al_mirror[u_alphabet.indexOf(c)] : (l_al_mirror.indexOf(c) >= 0 ? l_al_mirror[l_alphabet.indexOf(c)] : c); 
+            return _c;
+        }else{
+            var _c = l_al_mirror.indexOf(c) >= 0 ? l_al_mirror[l_alphabet.indexOf(c)] : (u_al_mirror.indexOf(c) >= 0 ? u_al_mirror[u_alphabet.indexOf(c)] : c); 
+            return _c;
+        }
+    }).join("");
+    
+    $(target).val(_out);
+}
+
 function transform_mirror(src,target,reverse){
     var l_alphabet = [];
     var l_al_mirror = [];
@@ -44,6 +100,10 @@ function transform(){
             transform_mirror('#in','#out',false);
             break;
         }
+        case 'chaos': {
+            transform_chaos('#in','#out',false);
+            break;
+        }
     }
 }
 
@@ -52,6 +112,10 @@ function untransform(){
     switch(target){
         case 'mirrors': {
             transform_mirror('#out','#in',true);
+            break;
+        }
+        case 'chaos': {
+            transform_chaos('#out','#in',false);
             break;
         }
     }
@@ -64,6 +128,7 @@ $(document).ready(function() {
         var target = $(this).val();
         ga('send', 'event', 'font', 'change', target);
         switch(target){
+            case 'chaos': 
             case 'mirrors': {
                 $('#out').css({ 'font-family': $('#toggle-font option:checked').data('f') });
                 transform();
